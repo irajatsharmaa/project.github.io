@@ -1,11 +1,7 @@
-.hero-image {
-    background-image: url("images/image1234.jpg"); /* The image used */
-    background-color: #cccccc; /* Used if the image is unavailable */
-    height: 500px; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-  }
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     background-color: white;
 }
@@ -26,11 +22,11 @@ html{
     padding-left: auto;
     padding-right: auto;
 }
-/* css for navigation element */
+/*navigation part*/
 .header{
     width: 100%;
     height: auto;
-    background-color: cornsilk;
+    background-color: whitesmoke;
     box-shadow:0 1px 4px rgba(146,161,176,.15);
     overflow: hidden;
     position: fixed;
@@ -39,7 +35,7 @@ html{
 .name{
     float: left;
     font-size: 24px;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'new times roman';
     font-weight: 999;
     height: 70px;
     color: #0E2431;
@@ -73,7 +69,7 @@ html{
     border-bottom: 2px solid #4070F4;
     transition: .2s ease-in;
 }
-/*main body*/
+/*header section*/
 .Main-banner p,.intro,.Introname{
     font-size: 50px;
     font-family: Poppins;
@@ -81,7 +77,7 @@ html{
     
     font-weight: 900;
     word-spacing: 12px;
-    color:#0E2431 ;
+    color: white ;
     letter-spacing: 2px;
     text-transform: capitalize;
 }
@@ -116,8 +112,16 @@ html{
     float: right;
     margin-top: 100px;
 }
-/*start main section*/
-.main-about{
+.hero-image {
+    background-image: url("images/image1.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 100vh; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+  /*about section*/
+  .main-about{
     width: 100%;
     overflow: hidden;
     text-align: center;
@@ -133,24 +137,23 @@ html{
     border-bottom: 2px solid #4070F4;    
     letter-spacing: 2px;
     text-transform: capitalize;
+    content: center;
 }
 .about,.skill,.work{
     margin: 50px 0;   
 }
 .col-left{
-    width: 50%;
-    float: center;
-    padding-left: 300px;
+    float: left;
+    padding-left: 25%;
 }
 .col-right{
-    width:50%;
-    float: center;
-    padding-left: 480px;
+    padding-top: 20%;
+    float: right;
 }
-.about img{
+.col-left img{
     width: 300px;
-    height:400px;
-    border-radius: 15px;
+    height:500px;
+    border-radius: 50%;
 }
 .about p,.skill p,.headline{
     text-align: left;
@@ -165,15 +168,24 @@ html{
     font-size: 30px;
     margin-top: 150px;
 }
+#contain{
+display: flex;
+}
+
 /*skills section*/
+.skill{
+    padding-left: 0;
+    display: flex;
+    float: left;
+}
 .skill-section{
     width: 100%;
     overflow: hidden;
     text-align: center;
     padding-top: 100px;
+    padding-left: 0;
 }
 .intro-name1{
-    float: left;
     font-size: 30px;
 }
 
@@ -250,6 +262,11 @@ html{
 }
 /*work section*/
 .work{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.work-title{
     font-size: 30px;
     font-family: Poppins;
     text-align: center;
@@ -261,63 +278,12 @@ html{
     letter-spacing: 2px;
     text-transform: capitalize;
 }
-/*next section*/
-.section-title{
-    font-size: 30px;
-    font-family: Poppins;
-    text-align: center;
-    font-weight: 700;
-    position: center;
-    word-spacing: 12px;
-    color: #4070F4;
-    border-bottom: 2px solid #4070F4;
-    letter-spacing: 2px;
-    text-transform: capitalize;
+.work-list{
+        list-style-type: square;
+        list-style-position: outside;
+        list-style-image: none;
 }
-.contact-section{
-    text-align: center;
-    width: 10%;
-}
-.contact__input {
-    width: 100%;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 1rem;
-    border-radius: .5rem;
-    border: 1.5px solid #0E2431;
-    outline: none;
-    margin-bottom: 2rem;
-}
-
-.contact-section form{
-    width: 360px;
-}
-.bd-grid1{
-    padding-left: 35%;
-    margin-top: 4rem;
-    width: 20%;
-    
-}
-.contact-form{
-    margin: 0 auto;
-}
-.button{
-    width: 140px;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 10px;
-    color: white;
-    text-transform: capitalize;
-    font-family: 'Poppins',sans-serif;
-    background-color: #4070F4;
-    outline: 0;
-    border: 0.1px solid white;
-    cursor: pointer;
-    border-radius: 10px;
-}
-.button:hover{
-    box-shadow: 0 10px 36px rgba(0,0,0,.15);
-}
+/*footer section*/
 .footer{
     width: 100%;
     padding: 1rem 0;
@@ -338,21 +304,3 @@ html{
     color: #fff;
     margin:10px;
 }
-.headline{
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #0E2431;
-}
-/*screen*/
-@media only screen and (max-width: 600px) {
-    .nav{
-        display: none;
-    }
-    
-    }
-    /* Small devices (portrait tablets and large phones, 600px and up) */
-    @media only screen and (min-width: 600px) {
-        .nav{
-            display: block;
-        }
-    }
